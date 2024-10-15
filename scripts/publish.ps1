@@ -2,6 +2,13 @@ $ErrorActionPreference = "Stop"
 $OUTPUT_DIR = "docs"
 $BROWSER_DIR = "docs/browser"
 
+function Check-Error {
+  if ($LASTEXITCODE -ne 0) {
+      Write-Output "Error detected. Exiting script."
+      exit $LASTEXITCODE
+  }
+}
+
 git fetch
 git checkout main
 git pull
@@ -10,12 +17,10 @@ $currentHash = git rev-parse HEAD
 $shortHash = $currentHash.Substring(0, 8)
 
 git checkout release
-if ($LASTEXITCODE -ne 0) {
-    Write-Output "Error detected. Exiting script."
-    exit $LASTEXITCODE
-}
+Check-Error
 
-git pull main
+git merge main
+Check-Error
 
 Remove-Item -Path $OUTPUT_DIR -Recurse -Force
 
