@@ -3,17 +3,17 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "the-poodle-doodler.github.io": {
+    "the-poodle-doodler.github.io2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "pd",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/the-poodle-doodler.github.io",
+            "outputPath": "dist/the-poodle-doodler.github.io2",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,12 +27,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -62,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "the-poodle-doodler.github.io:build:production"
+              "buildTarget": "the-poodle-doodler.github.io2:build:production"
             },
             "development": {
-              "buildTarget": "the-poodle-doodler.github.io:build:development"
+              "buildTarget": "the-poodle-doodler.github.io2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "the-poodle-doodler.github.io:build"
+            "buildTarget": "the-poodle-doodler.github.io2:build"
           }
         },
         "test": {
