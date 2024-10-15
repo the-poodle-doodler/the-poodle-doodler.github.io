@@ -1,3 +1,4 @@
+$ErrorActionPreference = "Stop"
 $OUTPUT_DIR = "docs"
 $BROWSER_DIR = "docs/browser"
 
@@ -9,6 +10,11 @@ $currentHash = git rev-parse HEAD
 $shortHash = $currentHash.Substring(0, 8)
 
 git checkout release
+if ($LASTEXITCODE -ne 0) {
+    Write-Output "Error detected. Exiting script."
+    exit $LASTEXITCODE
+}
+
 git pull main
 
 Remove-Item -Path $OUTPUT_DIR -Recurse -Force
@@ -20,7 +26,7 @@ Get-ChildItem -Path $BROWSER_DIR -Recurse | ForEach-Object {
     Move-Item -Path $_.FullName -Destination $OUTPUT_DIR
 }
 Remove-Item -Path $BROWSER_DIR -Recurse -Force
-Remove-Item -Path "3rdpartylicenses.txt" -Force
+Remove-Item -Path "docs/3rdpartylicenses.txt" -Force
 
 git add $OUTPUT_DIR
 git commit -m "Publish version $shortHash"
