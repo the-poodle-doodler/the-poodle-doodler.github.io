@@ -18,7 +18,7 @@ $shortHash = $currentHash.Substring(0, 8)
 git checkout release
 Test-Error
 
-git merge main
+git merge main -m "Merge branch 'main' into release"
 Test-Error
 
 Remove-Item -Path $OUTPUT_DIR -Recurse -Force
