@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300"
+   height="150"
+   viewBox="0 0 300 150"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="tornPaperInks.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#d78400"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="2.8970539"
+     inkscape:cx="157.05611"
+     inkscape:cy="86.121975"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <filter
+       inkscape:label="Basic Two Lights Bump"
+       inkscape:menu="Bumps"
+       inkscape:menu-tooltip="Two types of lighting emboss effect"
+       height="1"
+       y="0"
+       width="1"
+       x="0"
+       style="color-interpolation-filters:sRGB"
+       id="filter1">
+      <feTurbulence
+         baseFrequency="0.05"
+         numOctaves="5"
+         type="fractalNoise"
+         result="result91"
+         id="feTurbulence1"
+         seed="447" />
+      <feDisplacementMap
+         scale="25"
+         result="result5"
+         xChannelSelector="R"
+         in="SourceGraphic"
+         in2="result91"
+         id="feDisplacementMap1"
+         yChannelSelector="A" />
+      <feComposite
+         in="SourceGraphic"
+         operator="atop"
+         in2="result5"
+         id="feComposite1"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix9" />
+      <feColorMatrix
+         id="feColorMatrix10"
+         result="result2"
+         type="luminanceToAlpha"
+         in="fbSourceGraphic" />
+      <feSpecularLighting
+         id="feSpecularLighting10"
+         specularConstant="0.5"
+         surfaceScale="-15"
+         specularExponent="10"
+         result="result10">
+        <feDistantLight
+           id="feDistantLight10"
+           elevation="20"
+           azimuth="225" />
+      </feSpecularLighting>
+      <feDiffuseLighting
+         id="feDiffuseLighting10"
+         diffuseConstant="0.5"
+         surfaceScale="15">
+        <feDistantLight
+           id="feDistantLight11"
+           azimuth="225"
+           elevation="20" />
+      </feDiffuseLighting>
+      <feComposite
+         id="feComposite11"
+         result="result11"
+         in2="result10"
+         operator="arithmetic"
+         k2="0.5"
+         k3="0.5"
+         k1="0"
+         k4="0" />
+      <feComposite
+         id="feComposite12"
+         in="result11"
+         result="result9"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         in2="fbSourceGraphic"
+         k1="0"
+         k4="0" />
+      <feComposite
+         id="feComposite13"
+         in2="fbSourceGraphic"
+         operator="in"
+         in="result9" />
+    </filter>
+    <filter
+       inkscape:label="Basic Two Lights Bump"
+       inkscape:menu="Bumps"
+       inkscape:menu-tooltip="Two types of lighting emboss effect"
+       height="1"
+       y="0"
+       width="1"
+       x="0"
+       style="color-interpolation-filters:sRGB"
+       id="filter24">
+      <feTurbulence
+         baseFrequency="0.05"
+         numOctaves="5"
+         type="fractalNoise"
+         result="result91"
+         id="feTurbulence24" />
+      <feDisplacementMap
+         scale="25"
+         result="result5"
+         xChannelSelector="R"
+         in="SourceGraphic"
+         in2="result91"
+         id="feDisplacementMap24"
+         yChannelSelector="A" />
+      <feComposite
+         in="SourceGraphic"
+         operator="atop"
+         in2="result5"
+         id="feComposite24"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix24" />
+      <feColorMatrix
+         id="feColorMatrix25"
+         result="result2"
+         type="luminanceToAlpha"
+         in="fbSourceGraphic" />
+      <feSpecularLighting
+         id="feSpecularLighting25"
+         specularConstant="0.5"
+         surfaceScale="-15"
+         specularExponent="10"
+         result="result10">
+        <feDistantLight
+           id="feDistantLight25"
+           elevation="20"
+           azimuth="225" />
+      </feSpecularLighting>
+      <feDiffuseLighting
+         id="feDiffuseLighting25"
+         diffuseConstant="0.5"
+         surfaceScale="15">
+        <feDistantLight
+           id="feDistantLight26"
+           azimuth="225"
+           elevation="20" />
+      </feDiffuseLighting>
+      <feComposite
+         id="feComposite26"
+         result="result11"
+         in2="result10"
+         operator="arithmetic"
+         k2="0.5"
+         k3="0.5"
+         k1="0"
+         k4="0" />
+      <feComposite
+         id="feComposite27"
+         in="result11"
+         result="result9"
+         operator="arithmetic"
+         k2="1"
+         k3="1"
+         in2="fbSourceGraphic"
+         k1="0"
+         k4="0" />
+      <feComposite
+         id="feComposite28"
+         in2="fbSourceGraphic"
+         operator="in"
+         in="result9" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#f2f2f2;stroke-width:3.77953;stroke-miterlimit:0;filter:url(#filter24)"
+       id="rect1"
+       width="231.87399"
+       height="116.66923"
+       x="0"
+       y="0"
+       transform="scale(1.2938062,1.2856861)" />
+  </g>
+</svg>

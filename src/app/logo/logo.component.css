@@ -1,0 +1,23 @@
+.logoContainer {
+  background-image: url('/assets/tornPaper.svg');
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+  max-height: max-content;
+  max-width: max-content;
+  position: relative;
+  rotate: 2.5deg;
+}
+.logoPaper {
+  min-height: 100%;
+  width: 100%;
+}
+.logoText {
+  font-family: "Cabin Sketch", sans-serif;
+  font-size: 3rem;
+  padding: 1rem;
+  position: absolute;
+  rotate: -1.75deg;
+  text-align: center;
+}
