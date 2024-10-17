@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="filter24" x="0" y="0" width="1" height="1" color-interpolation-filters="sRGB">
+            <feTurbulence baseFrequency="0.05" numOctaves="5" result="result91" type="fractalNoise"/>
+            <feDisplacementMap in="SourceGraphic" in2="result91" result="result5" scale="25" xChannelSelector="R"/>
+            <feComposite in="SourceGraphic" in2="result5" operator="atop" result="fbSourceGraphic"/>
+            <feColorMatrix in="fbSourceGraphic" result="fbSourceGraphicAlpha" values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"/>
+            <feColorMatrix in="fbSourceGraphic" result="result2" type="luminanceToAlpha"/>
+            <feSpecularLighting result="result10" specularConstant="0.5" specularExponent="10" surfaceScale="-15">
+                <feDistantLight azimuth="225" elevation="20"/>
+            </feSpecularLighting>
+            <feDiffuseLighting diffuseConstant="0.5" surfaceScale="15">
+                <feDistantLight azimuth="225" elevation="20"/>
+            </feDiffuseLighting>
+            <feComposite in2="result10" k2="0.5" k3="0.5" operator="arithmetic" result="result11"/>
+            <feComposite in="result11" in2="fbSourceGraphic" k2="1" k3="1" operator="arithmetic" result="result9"/>
+            <feComposite in="result9" in2="fbSourceGraphic" operator="in"/>
+        </filter>
+    </defs>
+    <rect transform="scale(1.2938 1.2857)" width="231.87" height="116.67" fill="#f2f2f2" filter="url(#filter24)" stroke-miterlimit="0" stroke-width="3.7795"/>
+</svg>
