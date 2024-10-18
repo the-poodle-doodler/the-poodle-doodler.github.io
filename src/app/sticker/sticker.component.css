@@ -20,6 +20,7 @@
   box-sizing: content-box;
   display: block;
   opacity: 50%;
+  max-width: calc(100% - 20px);
 }
 .sticker {
   border-bottom-color: black;
@@ -29,6 +30,7 @@
   border-top-color: lightgrey;
   border-width: 1px;
   display: block;
+  max-width: calc(100% - 20px);
   position: absolute;
   top: 10px;
   left: 10px;

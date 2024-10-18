@@ -1,9 +1,7 @@
 <div class="frame" *ngIf="img">
   <div class="watermark">
     <img class="background" ngSrc="assets/gallery/{{img.id}}.jpg" alt="sticker"
-         [width]="getWidth()"
-         [height]="getHeight()"
-         [ngStyle]="{'width.px': getWidth(), 'height.px': getHeight()}"
+         [width]="width" [height]="height" [ngStyle]="{'width.px': width, 'height.px': height}"
     />
   </div>
   <figure>
@@ -11,12 +9,12 @@
       class="sticker"
       ngSrc="assets/gallery/{{img.id}}.jpg"
       alt="sticker"
-      [width]="getWidth()"
-      [height]="getHeight()"
-      [ngStyle]=" {'margin-top': img.top, 'margin-left': img.left, 'rotate': img.rotation, 'width.px': getWidth(), 'height.px': getHeight()} "
+      [width]="width"
+      [height]="height"
+      [ngStyle]=" {'margin-top': img.top, 'margin-left': img.left, 'rotate': img.rotation, 'width.px': width, 'height.px': height} "
       priority
     />
-    <figcaption class="description" *ngIf="img" [style.width.px]="getWidth() + 20">
+    <figcaption class="description" *ngIf="img" [style.width.px]="width + 20">
       <h2>{{img.title}}</h2>
       <p [innerHTML]="img.description"></p>
     </figcaption>
