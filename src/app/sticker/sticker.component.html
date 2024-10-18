@@ -1,7 +1,7 @@
 <div class="frame" *ngIf="img">
   <div class="watermark">
     <img class="background" ngSrc="assets/gallery/{{img.id}}.jpg" alt="sticker"
-         width="300" [height]="300 * img.aspectRatio"/>
+         width="300" [height]="300 * img.aspectRatio" />
   </div>
   <figure>
     <img
@@ -11,6 +11,7 @@
       width="300"
       [height]="300 * img.aspectRatio"
       [ngStyle]=" {'margin-top': img.top, 'margin-left': img.left, 'rotate': img.rotation} "
+      priority
     />
     <figcaption class="description" *ngIf="img">
       <h2>{{img.title}}</h2>
