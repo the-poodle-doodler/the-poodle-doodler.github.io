@@ -12,7 +12,8 @@ import {NgIf, NgOptimizedImage, NgStyle} from "@angular/common";
 export class StickerComponent implements OnInit {
   @Input() img?: GalleryItem;
   targetSize: number = 300;
-
+  width: number = this.targetSize;
+  height: number = this.targetSize;
   windowWidth = window.innerWidth;
 
   // Constructor
@@ -20,16 +21,22 @@ export class StickerComponent implements OnInit {
     this.getScreenSize();
   }
 
+  private recalculateSize() {
+    this.width = this.getWidth();
+    this.height = this.getHeight();
+  }
+
   @HostListener('window:resize', ['$event'])
   getScreenSize(_event?: any) {
     this.windowWidth = window.innerWidth;
+    this.recalculateSize();
   }
 
   private getMaxWidth(): number {
     return this.windowWidth - 80;
   }
 
-  getWidth(): number {
+  private getWidth(): number {
     if (!this.img) {
       return 0;
     }
@@ -43,7 +50,7 @@ export class StickerComponent implements OnInit {
     }
   }
 
-  getHeight(): number {
+  private getHeight(): number {
     if (!this.img) {
       return 0;
     }
