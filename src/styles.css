@@ -11,3 +11,10 @@ body {
     font-style: normal;
     font-size: 18px;
 }
+a:link, a:visited {
+    color: #3D85B8;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

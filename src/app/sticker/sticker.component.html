@@ -1,0 +1,21 @@
+<div class="frame" *ngIf="img">
+  <div class="watermark">
+    <img class="background" ngSrc="assets/gallery/{{img.id}}.jpg" alt="sticker"
+         width="300" [height]="300 * img.aspectRatio"/>
+  </div>
+  <figure>
+    <img
+      class="sticker"
+      ngSrc="assets/gallery/{{img.id}}.jpg"
+      alt="sticker"
+      width="300"
+      [height]="300 * img.aspectRatio"
+      [ngStyle]=" {'margin-top': img.top, 'margin-left': img.left, 'rotate': img.rotation} "
+    />
+    <figcaption class="description" *ngIf="img">
+      <h2>{{img.title}}</h2>
+      <p [innerHTML]="img.description"></p>
+    </figcaption>
+  </figure>
+</div>
+
