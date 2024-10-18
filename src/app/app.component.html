@@ -1,6 +1,9 @@
 <pd-logo></pd-logo>
 <div class="boardContent" >
-  <pd-sticker [img]="image" *ngFor="let image of images"></pd-sticker>
+  <pd-sticker [img]="image" *ngFor="let image of images | paginate: {itemsPerPage: 3, currentPage: currentPage}"></pd-sticker>
+</div>
+<div class="paginator">
+  <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
 </div>
 <router-outlet />
 <pd-footer></pd-footer>
