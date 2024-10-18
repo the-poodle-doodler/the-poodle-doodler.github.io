@@ -1,0 +1,46 @@
+:host {
+  flex-basis: 33%;
+  margin: auto;
+  width: fit-content;
+}
+.frame {
+  box-sizing: border-box;
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 auto 25px auto;
+}
+.watermark {
+  background-color: whitesmoke;
+  width:  fit-content;
+}
+.background {
+  background-color: whitesmoke;
+  border: 10px solid whitesmoke;
+  box-sizing: content-box;
+  display: block;
+  opacity: 50%;
+}
+.sticker {
+  border-bottom-color: black;
+  border-left-color: lightgrey;
+  border-right-color: black;
+  border-style: solid;
+  border-top-color: lightgrey;
+  border-width: 1px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.description {
+  background-color: rgba(220, 220, 220, 0.5);
+  margin-top: 5px;
+  padding: 10px;
+}
+.description h2 {
+
+}
+.description p {
+  text-align: justify;
+}
