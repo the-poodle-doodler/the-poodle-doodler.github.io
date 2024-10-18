@@ -28,6 +28,9 @@ export class StickerComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   getScreenSize(_event?: any) {
+    if (window.innerWidth === this.windowWidth) {
+      return;
+    }
     this.windowWidth = window.innerWidth;
     this.recalculateSize();
   }
