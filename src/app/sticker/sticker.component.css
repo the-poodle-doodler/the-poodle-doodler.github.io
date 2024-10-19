@@ -20,7 +20,12 @@
   box-sizing: content-box;
   display: block;
   opacity: 50%;
-  max-width: calc(100% - 20px);
+}
+.portrait {
+  width: 300px;
+}
+.landscape {
+  height: 300px;
 }
 .sticker {
   border-bottom-color: black;
@@ -30,19 +35,26 @@
   border-top-color: lightgrey;
   border-width: 1px;
   display: block;
-  max-width: calc(100% - 20px);
   position: absolute;
   top: 10px;
   left: 10px;
 }
 .description {
   background-color: rgba(220, 220, 220, 0.5);
-  margin-top: 5px;
+  margin: 5px auto 0 auto;
   padding: 10px;
+  width: 320px;
 }
 .description h2 {
 
 }
 .description p {
   text-align: justify;
+}
+
+@media (max-width: 400px) {
+  .landscape {
+    height: unset;
+    width: 300px;
+  }
 }
