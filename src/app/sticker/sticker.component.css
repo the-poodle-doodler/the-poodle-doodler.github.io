@@ -19,6 +19,7 @@
   border: 10px solid whitesmoke;
   box-sizing: content-box;
   display: block;
+  filter: blur(1px);
   opacity: 50%;
 }
 .portrait {

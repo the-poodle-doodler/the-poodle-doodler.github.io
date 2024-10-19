@@ -5,7 +5,7 @@
     border: 0;
 }
 body {
-  background-image: url("/assets/corkboard.svg");
+  background: url('assets/board.png');
   font-family: "Pangolin", sans-serif;
     font-weight: 400;
     font-style: normal;
