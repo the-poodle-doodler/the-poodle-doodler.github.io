@@ -1,11 +1,11 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {GalleryItem} from "../common/galleryItem.model";
-import {NgIf, NgOptimizedImage, NgStyle} from "@angular/common";
+import {NgClass, NgIf, NgStyle} from "@angular/common";
 
 @Component({
   selector: 'pd-sticker',
   standalone: true,
-  imports: [NgIf, NgOptimizedImage, NgStyle],
+  imports: [NgClass, NgIf, NgStyle],
   templateUrl: './sticker.component.html',
   styleUrl: './sticker.component.css'
 })

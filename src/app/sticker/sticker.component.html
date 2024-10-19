@@ -1,20 +1,16 @@
 <div class="frame" *ngIf="img">
   <div class="watermark">
-    <img class="background" ngSrc="assets/gallery/{{img.id}}.jpg" alt="sticker"
-         [width]="width" [height]="height" [ngStyle]="{'width.px': width, 'height.px': height}"
-    />
+    <img class="background" [ngClass]="(img.aspectRatio >= 1) ? 'portrait' : 'landscape'" src="assets/gallery/{{img.id}}.jpg" alt="sticker" />
   </div>
   <figure>
     <img
       class="sticker"
-      ngSrc="assets/gallery/{{img.id}}.jpg"
+      src="assets/gallery/{{img.id}}.jpg"
       alt="sticker"
-      [width]="width"
-      [height]="height"
-      [ngStyle]=" {'margin-top': img.top, 'margin-left': img.left, 'rotate': img.rotation, 'width.px': width, 'height.px': height} "
-      priority
+      [ngClass]="(img.aspectRatio >= 1) ? 'portrait' : 'landscape'"
+      [ngStyle]=" {'margin-top': img.top, 'margin-left': img.left, 'rotate': img.rotation} "
     />
-    <figcaption class="description" *ngIf="img" [style.width.px]="width + 20">
+    <figcaption class="description" *ngIf="img">
       <h2>{{img.title}}</h2>
       <p [innerHTML]="img.description"></p>
     </figcaption>
